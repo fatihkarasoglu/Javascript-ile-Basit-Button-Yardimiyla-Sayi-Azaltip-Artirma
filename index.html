@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buton ile Sayı Azaltıp Artırma</title>
+    <style>
+        input[type="button"] {
+            width: 175px;
+            height: 175px;
+            border: none;
+            font-size: 3em;
+            color: #E7E7E7;
+        }
+
+        #eksilt {
+            background: #630606;
+        }
+
+        #arttir {
+            background: #125C13;
+        }
+
+        #sonuc {
+            background: #000B49;
+        }
+    </style>
+    <script>
+        function arttir() {
+            let sonuc = document.getElementById("sonuc");
+            sonuc.value = Number(sonuc.value) + 1;
+        }
+
+        function eksilt() {
+            let sonuc = document.getElementById("sonuc");
+            sonuc.value = Number(sonuc.value) - 1;
+        }
+    </script>
+</head>
+
+<body>
+    <input id="eksilt" type=button onclick="eksilt()" value="-">
+    <input type=button id="sonuc" value="0">
+    <input id="arttir" type=button onclick="arttir()" value="+">
+</body>
+
+</html>
